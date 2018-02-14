@@ -23,7 +23,7 @@ ENV GO_FULL_VERSION="17.4.0-4892" \
     GID=10014
 
 RUN set -ex \
- && apk --update add curl bash apache2-utils git \
+ && apk --update add curl bash apache2-utils git jq \
  && curl -ksSL https://download.gocd.io/binaries/${GO_FULL_VERSION}/generic/go-server-${GO_FULL_VERSION}.zip -o /tmp/go-server.zip \
  && unzip /tmp/go-server.zip -d /tmp \
  && mkdir -p ${GO_HOME_DIR} ${SERVER_WORK_DIR} ${GO_CONFIG_DIR} ${GO_LOGS_DIR} \
